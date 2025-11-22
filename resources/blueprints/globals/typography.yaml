@@ -1,0 +1,117 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: 'Heading Font'
+        fields:
+          -
+            handle: heading_font_type
+            field:
+              options:
+                -
+                  key: google
+                  value: 'Google Font'
+                -
+                  key: custom
+                  value: 'Custom Font'
+              type: select
+              display: 'Font Type'
+              default: google
+              width: 50
+          -
+            handle: heading_font_style
+            field:
+              options:
+                -
+                  key: serif
+                  value: Serif
+                -
+                  key: sans-serif
+                  value: Sans-Serif
+              default: serif
+              type: select
+              display: 'Font Style'
+              width: 50
+          -
+            handle: heading_font_name
+            field:
+              type: text
+              display: 'Font Name'
+              width: 50
+          -
+            handle: heading_font_source_google
+            field:
+              type: text
+              display: 'Font Source'
+              width: 50
+              if:
+                heading_font_type: 'equals google'
+          -
+            handle: heading_font_source_custom
+            field:
+              max_files: 1
+              container: fonts
+              type: assets
+              display: 'Font Source'
+              width: 50
+              restrict: true
+              validate:
+                - 'mimes:ttf'
+              if:
+                heading_font_type: 'equals custom'
+      -
+        display: 'Body Font'
+        fields:
+          -
+            handle: body_font_type
+            field:
+              options:
+                -
+                  key: google
+                  value: 'Google Font'
+                -
+                  key: custom
+                  value: 'Custom Font'
+              type: select
+              display: 'Font Type'
+              default: google
+              width: 50
+          -
+            handle: body_font_style
+            field:
+              options:
+                -
+                  key: serif
+                  value: Serif
+                -
+                  key: sans-serif
+                  value: Sans-Serif
+              default: serif
+              type: select
+              display: 'Font Style'
+              width: 50
+          -
+            handle: body_font_name
+            field:
+              type: text
+              display: 'Font Name'
+              width: 50
+          -
+            handle: body_font_source_google
+            field:
+              type: text
+              display: 'Font Source'
+              width: 50
+              if:
+                body_font_type: 'equals google'
+          -
+            handle: body_font_source_custom
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: 'Font Source'
+              width: 50
+              if:
+                body_font_type: 'equals custom'

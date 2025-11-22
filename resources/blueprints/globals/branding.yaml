@@ -1,0 +1,46 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: Images
+        fields:
+          -
+            handle: logo
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: Logo
+              validate:
+                - required
+      -
+        display: Colors
+        fields:
+          -
+            handle: primary_color
+            field:
+              input_type: color
+              type: text
+              display: 'Primary Color'
+              width: 33
+              validate:
+                - required
+          -
+            handle: secondary_color
+            field:
+              input_type: color
+              type: text
+              display: 'Secondary Color'
+              width: 33
+              validate:
+                - required
+          -
+            handle: accent_color
+            field:
+              input_type: color
+              type: text
+              display: 'Accent Color'
+              width: 33
+              validate:
+                - required

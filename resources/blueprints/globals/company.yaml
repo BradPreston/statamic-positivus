@@ -1,0 +1,65 @@
+tabs:
+  address:
+    display: Address
+    sections:
+      -
+        fields:
+          -
+            handle: street
+            field:
+              placeholder: '123 Test St.'
+              type: text
+              display: Street
+              validate:
+                - required
+          -
+            handle: city
+            field:
+              placeholder: 'Los Angeles'
+              type: text
+              display: City
+              validate:
+                - required
+          -
+            handle: state
+            field:
+              placeholder: CA
+              character_limit: 2
+              type: textarea
+              display: State
+              validate:
+                - required
+          -
+            handle: zipcode
+            field:
+              input_type: number
+              placeholder: '90210'
+              character_limit: 5
+              type: text
+              display: Zipcode
+              validate:
+                - required
+  contact:
+    display: Contact
+    sections:
+      -
+        display: 'New Section'
+        fields:
+          -
+            handle: email
+            field:
+              input_type: email
+              placeholder: johndoe@email.com
+              type: text
+              display: Email
+              validate:
+                - required
+          -
+            handle: phone
+            field:
+              input_type: tel
+              placeholder: '(123) 456-7890'
+              type: text
+              display: Phone
+              validate:
+                - required
