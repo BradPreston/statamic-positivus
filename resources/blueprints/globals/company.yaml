@@ -70,98 +70,25 @@ tabs:
         display: 'Social Media'
         fields:
           -
-            handle: social
+            handle: social_links
             field:
-              options:
-                -
-                  key: facebook
-                  value: Facebook
-                -
-                  key: twitter
-                  value: X/Twitter
-                -
-                  key: instagram
-                  value: Instagram
-                -
-                  key: youtube
-                  value: YouTube
-                -
-                  key: linkedin
-                  value: LinkedIn
-                -
-                  key: pinterest
-                  value: Pinterest
-              type: checkboxes
-              display: 'Social Media'
-          -
-            handle: facebook
-            field:
-              input_type: url
-              placeholder: 'Facebook page url'
-              type: text
-              display: Facebook
-              validate:
-                - required
-                - sometimes
-              if:
-                social: 'contains facebook'
-          -
-            handle: x_twitter
-            field:
-              input_type: url
-              placeholder: 'X/Twitter page url'
-              type: text
-              display: X/Twitter
-              validate:
-                - required
-                - sometimes
-              if:
-                social: 'contains twitter'
-          -
-            handle: instagram
-            field:
-              input_type: url
-              placeholder: 'Instagram page url'
-              type: text
-              display: Instagram
-              validate:
-                - required
-                - sometimes
-              if:
-                social: 'contains instagram'
-          -
-            handle: youtube
-            field:
-              input_type: url
-              placeholder: 'YouTube page url'
-              type: text
-              display: YouTube
-              validate:
-                - required
-                - sometimes
-              if:
-                social: 'contains youtube'
-          -
-            handle: linkedin
-            field:
-              input_type: url
-              placeholder: 'LinkedIn page url'
-              type: text
-              display: LinkedIn
-              validate:
-                - required
-                - sometimes
-              if:
-                social: 'contains linkedin'
-          -
-            handle: pinterest
-            field:
-              input_type: url
-              placeholder: 'Pinterest page url'
-              type: text
-              display: Pinterest
-              validate:
-                - required
-                - sometimes
-              if:
-                social: 'contains pinterest'
+              type: replicator
+              display: 'Social Links'
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    social_media:
+                      display: 'Social Media'
+                      fields:
+                        -
+                          handle: social_media_link
+                          field:
+                            input_type: url
+                            type: text
+                            display: 'Social Media Link'
+                        -
+                          handle: social_media_icon
+                          field:
+                            type: icon
+                            display: 'Social Media Icon'
