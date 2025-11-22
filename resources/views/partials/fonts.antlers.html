@@ -1,0 +1,39 @@
+{{ if typography.heading_font_type === 'google' || typography.body_font_type === 'google' }}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{{ /if }}
+
+{{ if typography.heading_font_type === 'google' }}
+    <link href="{{ typography.heading_font_source_google }}" rel="stylesheet">
+{{ /if }}
+
+{{ unless typography.body_font_name === typography.heading_font_name }}
+    {{ if typography.body_font_type === 'google' }}
+        <link href="{{ typography.body_font_source_google }}" rel="stylesheet">
+    {{ /if }}
+{{ /unless }}
+
+{{ serif_fallback_fonts = '"Times New Roman", Times, Georgia, serif'}}
+{{ sans_serif_fallback_fonts = 'Arial, Helvetica, Verdana, sans-serif'}}
+
+{{ if typography.heading_font_style === 'serif' }}
+    {{ heading_fallback_fonts = serif_fallback_fonts }}
+{{ else }}
+    {{ heading_fallback_fonts = sans_serif_fallback_fonts }}
+{{ /if }}
+
+{{ if typography.body_font_style === 'serif' }}
+    {{ body_fallback_fonts = serif_fallback_fonts }}
+{{ else }}
+    {{ body_fallback_fonts = sans_serif_fallback_fonts }}
+{{ /if }}
+
+<style>
+    h1, h2, h3, h4, h5, h6 {
+        font-family: "{{ typography.heading_font_name }}", {{ heading_fallback_fonts }};
+    }
+
+    p, div, span, a, button, section, strong, small, li {
+        font-family: "{{ typography.body_font_name }}", {{ body_fallback_fonts }};
+    }
+</style>
