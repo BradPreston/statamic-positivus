@@ -1,1 +1,6 @@
 title: Branding
+data:
+  logo: logo.png
+  primary_color: '#f3f3f3'
+  secondary_color: '#191a23'
+  accent_color: '#b9ff66'

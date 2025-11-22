@@ -1,1 +1,8 @@
 title: Company
+data:
+  street: '1234 Main St.'
+  city: Mooncity
+  state: CA
+  zipcode: 90210
+  email: brad@bradpreston.com
+  phone: '(123) 456-7890'

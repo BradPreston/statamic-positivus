@@ -1,1 +1,10 @@
 title: Typography
+data:
+  heading_font_type: google
+  heading_font_style: sans-serif
+  heading_font_name: 'Space Grotesk'
+  heading_font_source_google: 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap'
+  body_font_type: google
+  body_font_style: sans-serif
+  body_font_name: 'Space Grotesk'
+  body_font_source_google: 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap'
