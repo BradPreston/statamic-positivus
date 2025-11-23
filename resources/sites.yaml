@@ -1,0 +1,4 @@
+default:
+  name: Positivus
+  url: /
+  locale: '{{ config:app:locale }}'

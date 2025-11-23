@@ -1,0 +1,43 @@
+<footer class="max-w-7xl mx-auto w-full bg-(--secondary-color) rounded-t-4xl py-12 px-8 sm:px-16 flex flex-col gap-10">
+    <div class="flex justify-between flex-col sm:flex-row">
+        <a href="/">
+            <img src="{{ branding.logo }}" alt="{{ branding.logo.alt }}" width="{{ branding.logo.width }}" height="{{ branding.logo.height }}" class="invert">
+        </a>
+        <div class="flex gap-5 mt-2 sm:mt-0">
+            {{ company.social_links }}
+                {{ partial:social }}
+            {{ /company.social_links }}
+        </div>
+    </div>
+    <div class="flex flex-col gap-10 justify-between lg:gap-40 lg:flex-row">
+        <div class="flex flex-col sm:flex-row sm:gap-10 lg:flex-col gap-5">
+            <div>
+                <h3 class="text-(--accent-color)">Contact Us</h3>
+                <address class="text-(--primary-color)">
+                    <p><strong>Email: </strong><a href="mailto:{{ company.email }}" title="Send email to {{ site.name }}">{{ company.email }}</a></p>
+                    <p><strong>Phone: </strong><a href="tel:{{ company.phone }}" title="Call {{ site.name }}">{{ company.phone }}</a></p>
+                </address>
+            </div>
+            <div>
+                <h3 class="text-(--accent-color)">Address</h3>
+                <address class="text-(--primary-color)">
+                    <p>{{ company.street }}</p>
+                    <p>{{ company.city }}, {{ company.state }} {{company.zipcode }}</p>
+                </address>
+            </div>
+        </div>
+        <div class="bg-[#292A32] rounded-3xl flex items-center justify-center py-4 px-4 sm:px-10 sm:py-14">
+            <form action="#" class="w-full flex gap-5 flex-col sm:flex-row">
+                <input type="email" id="email" name="subscribe[name]" class="border border-(--primary-color) py-5 px-8 w-full sm:max-w-[285px] text-(--primary-color) placeholder-(--primary-color)! rounded-2xl text-lg" placeholder="Email">
+                <input type="submit" value="Subscribe to news" class="sm:w-max bg-(--accent-color) text-(--secondary-color) border border-(--accent-color) flex justify-center py-5 sm:px-8 rounded-2xl sm:text-xl transition hover:bg-(--secondary-color) hover:text-(--accent-color) w-full">
+            </form>
+        </div>
+    </div>
+
+    <hr class="border-(--primary-color) -my-5">
+
+    <div class="flex flex-col gap-5 sm:gap-10 sm:flex-row">
+        <p class="text-(--primary-color)">&copy; {{ now format="Y" }} {{ site.name }}. All Rights Reserved.</p>
+        <a href="/" class="text-(--primary-color) border-b border-b-(--primary-color) w-fit">Privacy Policy</a>
+    </div>
+</footer>

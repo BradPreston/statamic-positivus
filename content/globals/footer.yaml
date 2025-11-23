@@ -1,0 +1,11 @@
+title: Footer
+data:
+  layout:
+    -
+      type: set
+      attrs:
+        id: miamp9hd
+        values:
+          type: layout
+          logo: logo.png
+          show_social_links: true

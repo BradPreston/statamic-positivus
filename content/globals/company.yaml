@@ -6,10 +6,22 @@ data:
   zipcode: 90210
   email: brad@bradpreston.com
   phone: '(123) 456-7890'
-  social:
-    - facebook
-    - twitter
-    - linkedin
-  facebook: 'https://www.facebook.com/figmadesign/'
-  x_twitter: 'https://x.com/figma'
-  linkedin: 'https://www.linkedin.com/company/figma'
+  social_links:
+    -
+      id: mianecnx
+      social_platform: Facebook
+      social_media_link: 'https://www.facebook.com/figmadesign/'
+      type: social_media
+      enabled: true
+    -
+      id: mianep5t
+      social_platform: X
+      social_media_link: 'https://x.com/figma'
+      type: social_media
+      enabled: true
+    -
+      id: mianfae2
+      social_platform: LinkedIn
+      social_media_link: 'https://www.linkedin.com/company/figma/'
+      type: social_media
+      enabled: true

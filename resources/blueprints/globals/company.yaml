@@ -82,11 +82,22 @@ tabs:
                       display: 'Social Media'
                       fields:
                         -
+                          handle: social_platform
+                          field:
+                            placeholder: Facebook
+                            type: text
+                            display: 'Social Platform'
+                            validate:
+                              - required
+                        -
                           handle: social_media_link
                           field:
                             input_type: url
                             type: text
                             display: 'Social Media Link'
+                            placeholder: 'https://www.facebook.com/my-awesome-company/'
+                            validate:
+                              - required
                         -
                           handle: social_media_icon
                           field:
