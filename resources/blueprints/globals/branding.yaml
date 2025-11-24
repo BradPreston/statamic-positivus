@@ -14,6 +14,18 @@ tabs:
               display: Logo
               validate:
                 - required
+              width: 50
+          -
+            handle: favicon
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: Favicon
+              width: 50
+              validate:
+                - required
+                - 'mimes:ico'
       -
         display: Colors
         fields:

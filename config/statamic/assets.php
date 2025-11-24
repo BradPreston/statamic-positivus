@@ -208,7 +208,7 @@ return [
     |
     */
 
-    'additional_uploadable_extensions' => [],
+    'additional_uploadable_extensions' => ['ico'],
 
     /*
     |--------------------------------------------------------------------------
